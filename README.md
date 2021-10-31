@@ -71,17 +71,17 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 ## Resources
 
-#### APIs
+### APIs
 
 Open Weather Map: [https://openweathermap.org/api](https://openweathermap.org/api).
 
 Meta Weather: [https://openweathermap.org/api](https://openweathermap.org/api).
 
-#### UI
+### UI
 
 Dribble: [https://dribbble.com/Isakoff/collections](https://dribbble.com/Isakoff/collections).
 
-#### Icons
+### Icons
 
 Interface Icons: [https://www.flaticon.com/uicons](https://www.flaticon.com/uicons).
 
