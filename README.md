@@ -68,3 +68,25 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+### Resources
+
+#### APIs
+
+[openweathermap-api](https://openweathermap.org/api)
+[metaweather-api](https://openweathermap.org/api)
+
+#### UI
+
+[dribbble](https://dribbble.com/Isakoff/collections)
+
+#### Icons
+
+[interface-icons](https://www.flaticon.com/uicons)
+[weather-icons](https://www.flaticon.com/packs/search?word=weather&type=icon&shape=fill&order_by=4)
+
+### Fonts
+
+[google-fonts](https://fonts.google.com/specimen/Inter?query=Inter)
+[apple-platform-fonts](https://developer.apple.com/fonts/)
+[other-awesome-fonts](https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/)
