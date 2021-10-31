@@ -73,20 +73,20 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 #### APIs
 
-[openweathermap-api](https://openweathermap.org/api)
-[metaweather-api](https://openweathermap.org/api)
+Open Weather Map: [https://openweathermap.org/api](https://openweathermap.org/api)
+Meta Weather: [https://openweathermap.org/api](https://openweathermap.org/api)
 
 #### UI
 
-[dribbble](https://dribbble.com/Isakoff/collections)
+Dribble: [https://dribbble.com/Isakoff/collections](https://dribbble.com/Isakoff/collections)
 
 #### Icons
 
-[interface-icons](https://www.flaticon.com/uicons)
-[weather-icons](https://www.flaticon.com/packs/search?word=weather&type=icon&shape=fill&order_by=4)
+Interface Icons: [https://www.flaticon.com/uicons](https://www.flaticon.com/uicons)
+Weather Icons: [https://www.flaticon.com/packs/search?word=weather&type=icon&shape=fill&order_by=4](https://www.flaticon.com/packs/search?word=weather&type=icon&shape=fill&order_by=4)
 
 ### Fonts
 
-[google-fonts](https://fonts.google.com/specimen/Inter?query=Inter)
-[apple-platform-fonts](https://developer.apple.com/fonts/)
-[other-awesome-fonts](https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/)
+Google Fonts: [https://fonts.google.com/specimen/Inter?query=Inter](https://fonts.google.com/specimen/Inter?query=Inter)
+Apple Platform Fonts: [https://developer.apple.com/fonts/](https://developer.apple.com/fonts/)
+Other Awesome Fonts: [https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/](https://elementthree.com/blog/free-font-alternatives-to-designer-favorites/)
