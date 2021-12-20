@@ -16,6 +16,11 @@ $nav-icon: $cream;
   box-sizing: border-box;
 }
 
+*:focus-visible {
+  outline-width: 0.2rem;
+  outline-offset: 0.1rem;
+}
+
 html {
   font-size: 62.5%;
   background-color: $bg-primary;
@@ -61,7 +66,6 @@ p {
 }
 
 .app {
-  border: 1px solid red;
   padding: 2rem;
   max-width: 1200px;
   margin: 0 auto;

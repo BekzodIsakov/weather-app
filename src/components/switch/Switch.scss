@@ -2,9 +2,12 @@
 @import '../../index.scss';
 
 .switch {
-  display: inline-block;
-  width: 4rem;
-  height: 2.4rem;
+  display: block;
+  width: 3.5rem;
+  height: 2rem;
+
+  margin-left: auto;
+  border-radius: 2.4rem;
 
   input {
     display: none;
@@ -12,26 +15,25 @@
 
   .track {
     position: relative;
+
     display: inline-block;
     width: 100%;
     height: 100%;
-    background-color: $blue;
-    border-radius: 2.2rem;
-    cursor: pointer;
-  }
 
-  input:checked + .track {
+    border: 3px solid $blue;
+    border-radius: 2.2rem;
     background-color: $blue;
+    cursor: pointer;
   }
 
   .thumb {
     position: absolute;
-    left: 0.3rem;
-    top: 0.325rem;
+    left: 0;
+    top: 0;
 
     display: inline-block;
-    width: 2rem;
-    height: 1.8rem;
+    width: 50%;
+    height: 100%;
 
     background-color: $cream;
     border-radius: 2.4rem;
@@ -39,6 +41,6 @@
   }
 
   input:checked + .track .thumb {
-    transform: translateX(1.4rem);
+    transform: translateX(100%);
   }
 }

@@ -6,6 +6,8 @@ const App = () => {
     <div className='app'>
       <Switch />
       <Test />
+      <button>button</button>
+      <input type='text' />
       <h1>heading - 1</h1>
       <h2>heading - 2</h2>
       <h6>heading - 6</h6>

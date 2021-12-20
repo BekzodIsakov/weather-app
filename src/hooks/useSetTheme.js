@@ -6,17 +6,17 @@ export const useSetTheme = () => {
     '(prefers-color-scheme: dark)'
   ).matches;
 
-  const [theme, setTheme] = useState(presetTheme);
+  const [selectedTheme, setSelectedTheme] = useState(presetTheme);
 
   if (!presetTheme) {
     if (browserDefaultDark) {
-      setTheme('dark');
+      setSelectedTheme('dark');
     } else {
-      setTheme('light');
+      setSelectedTheme('light');
     }
   }
 
-  if (theme === 'dark') {
+  if (selectedTheme === 'dark') {
     document.body.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
   } else {
@@ -24,11 +24,16 @@ export const useSetTheme = () => {
     localStorage.setItem('theme', 'light');
   }
 
-  return () => {
-    if (theme === 'dark') {
-      setTheme('light');
+  const setTheme = () => {
+    if (selectedTheme === 'dark') {
+      setSelectedTheme('light');
     } else {
-      setTheme('dark');
+      setSelectedTheme('dark');
     }
+  };
+
+  return {
+    setTheme,
+    selectedTheme,
   };
 };
