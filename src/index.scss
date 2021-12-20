@@ -1,4 +1,14 @@
-@import './styles/variables';
+@import './styles/colors';
+@import './styles/fonts';
+
+// light-theme
+$font-primary: $blue200;
+$font-secondary: $blue50;
+$font-tertiary: $gray50;
+$bg-primary: $gray;
+$bg-secondary: $white;
+$bg-tertiary: $blue100;
+$nav-icon: $cream;
 
 * {
   margin: 0;
@@ -8,11 +18,14 @@
 
 html {
   font-size: 62.5%;
+  background-color: $bg-primary;
 }
 
 body {
+  min-height: 100vh;
   font-size: 1.4rem;
-  background-color: $gray;
+  color: $font-primary;
+  font-family: 'Nunito';
 }
 
 h1,
@@ -47,6 +60,30 @@ p {
   line-height: 1.8em;
 }
 
-body[data-theme='dark'] {
-  background-color: blue;
+.app {
+  border: 1px solid red;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+[data-theme='dark'] {
+  // dark-theme
+  $font-primary: $gray;
+  $font-secondary: $blue;
+  $font-tertiary: $gray50;
+  $bg-primary: $blue500;
+  $bg-secondary: $blue400;
+  $bg-tertiary: $gray50;
+  $nav-icon: $pink;
+
+  color: $font-primary;
+  background-color: $bg-primary;
+}
+
+@media only screen and (max-width: 600px) {
+  //what's the ideal font-size for smartphones
+  html {
+    font-size: 55%;
+  }
 }

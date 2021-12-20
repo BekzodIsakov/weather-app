@@ -1,0 +1,44 @@
+@import '../../styles/colors';
+@import '../../index.scss';
+
+.switch {
+  display: inline-block;
+  width: 4rem;
+  height: 2.4rem;
+
+  input {
+    display: none;
+  }
+
+  .track {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: $blue;
+    border-radius: 2.2rem;
+    cursor: pointer;
+  }
+
+  input:checked + .track {
+    background-color: $blue;
+  }
+
+  .thumb {
+    position: absolute;
+    left: 0.3rem;
+    top: 0.325rem;
+
+    display: inline-block;
+    width: 2rem;
+    height: 1.8rem;
+
+    background-color: $cream;
+    border-radius: 2.4rem;
+    transition: 0.4s;
+  }
+
+  input:checked + .track .thumb {
+    transform: translateX(1.4rem);
+  }
+}
