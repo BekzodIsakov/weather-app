@@ -1,0 +1,21 @@
+@import '../../../styles/colors';
+
+.humidity {
+  display: inline-flex;
+  align-items: flex-end;
+
+  span {
+    margin-left: 0.5rem;
+    line-height: 1em;
+  }
+
+  svg:last-of-type {
+    fill: $blue200;
+  }
+}
+
+[data-theme='dark'] {
+  .humidity svg:last-of-type {
+    fill: $gray;
+  }
+}

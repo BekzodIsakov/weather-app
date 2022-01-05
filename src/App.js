@@ -3,10 +3,11 @@ import {
   Location,
   WeatherStatusImg,
   WeatherDegree,
+  Pill,
 } from './components/atoms';
 import cloud from './assets/images/cloud.png';
 
-import { IoWaterOutline } from 'react-icons/io5';
+import { Humidity, WindSpeed, Sunrise, Sunset } from './components/molecules';
 
 const App = () => {
   return (
@@ -14,9 +15,13 @@ const App = () => {
       <Switch />
       <Location>San Fransisco, California, USA</Location>
       <WeatherStatusImg src={cloud} alt='cloud' size={'large'} />
-      <WeatherDegree>20</WeatherDegree>
+      <WeatherDegree weatherUnit={'C'}>20</WeatherDegree>
+      <Pill>Cloudy</Pill>
 
-      <IoWaterOutline title='water-drop' />
+      <Humidity percentage={92} />
+      <WindSpeed speed={7} />
+      <Sunrise time={'07:48'} />
+      <Sunset time={'17:13'} />
     </div>
   );
 };
