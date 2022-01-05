@@ -18,7 +18,7 @@ $nav-icon: $cream;
 
 *:focus-visible {
   outline-width: 0.2rem;
-  outline-offset: 0.1rem;
+  outline-offset: 0.2rem;
 }
 
 html {
@@ -28,7 +28,7 @@ html {
 
 body {
   min-height: 100vh;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   color: $font-primary;
   font-family: 'Nunito';
 }
@@ -65,10 +65,20 @@ p {
   line-height: 1.8em;
 }
 
+.small-icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.large-icon {
+  width: 4rem;
+  height: 4rem;
+}
+
 .app {
-  padding: 2rem;
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
+  padding: 2rem;
 }
 
 [data-theme='dark'] {
@@ -88,6 +98,6 @@ p {
 @media only screen and (max-width: 600px) {
   //what's the ideal font-size for smartphones
   html {
-    font-size: 55%;
+    font-size: 57%;
   }
 }

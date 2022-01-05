@@ -1,5 +1,5 @@
 import React from 'react';
-import { useSetTheme } from '../../hooks/useSetTheme';
+import { useSetTheme } from '../../../hooks/useSetTheme';
 
 import './Switch.scss';
 

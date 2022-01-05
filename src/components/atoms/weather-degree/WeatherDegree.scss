@@ -1,0 +1,20 @@
+.weather-degree {
+  display: inline-block;
+
+  &.small {
+    font-size: 2rem;
+  }
+
+  &.medium {
+    font-size: 4rem;
+  }
+
+  &.large {
+    font-size: 7rem;
+  }
+
+  .symbol,
+  .unit {
+    margin-left: 0.1em;
+  }
+}

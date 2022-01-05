@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { IconContext } from 'react-icons';
 
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <IconContext.Provider value={{ color: '#4c668a', size: 28 }}>
+      <App />
+    </IconContext.Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );

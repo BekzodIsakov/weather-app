@@ -1,0 +1,20 @@
+@import '../../../styles/colors';
+@import '../../../index.scss';
+
+.pill {
+  display: inline-block;
+
+  color: $font-primary;
+  font-family: Nunito500;
+  background-color: $cream;
+
+  border-radius: 10rem;
+  padding: 0.4em 0.8em;
+}
+
+[data-theme='dark'] {
+  .pill {
+    background-color: $blue100;
+    color: $gray;
+  }
+}
