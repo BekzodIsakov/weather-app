@@ -1,0 +1,58 @@
+@import '../../../styles/colors';
+
+.setting {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .option {
+    font-size: smaller;
+    display: flex;
+    align-items: center;
+
+    button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+      margin-left: 1.5rem;
+      transform: translateX(-50%);
+    }
+
+    .arrow-icon {
+      fill: $gray;
+      transition-duration: 0.3s;
+    }
+
+    .dropdown {
+      border: 1px solid blue;
+      position: absolute;
+      top: 99%;
+      min-width: max-content;
+      display: none;
+      border-radius: 0.5rem;
+    }
+
+    button:hover + .dropdown {
+      display: block;
+    }
+
+    .dropdown:hover {
+      display: block;
+    }
+
+    ul {
+      padding: 0.5rem;
+      list-style-type: none;
+    }
+  }
+}
+
+[data-theme='light'] {
+  .setting button .arrow-icon {
+    fill: $blue500;
+  }
+}
