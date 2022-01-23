@@ -1,17 +1,15 @@
 .pill {
   display: inline-block;
+  padding: 0.4em 0.8em;
+  border-radius: 10rem;
 
-  color: $font-primary;
+  color: var(--font-primary);
   font-family: Nunito500;
   background-color: $cream;
-
-  border-radius: 10rem;
-  padding: 0.4em 0.8em;
 }
 
 [data-theme='dark'] {
   .pill {
-    color: $gray;
     background-color: $blue100;
   }
 }

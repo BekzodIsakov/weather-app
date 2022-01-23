@@ -1,0 +1,17 @@
+.weather-feature {
+  display: inline-flex;
+  align-items: flex-end;
+  margin-left: 2rem;
+
+  span {
+    display: flex;
+    column-gap: 0.4rem;
+    margin-left: 0.8rem;
+
+    svg {
+      fill: var(--font-primary);
+      line-height: 1em;
+      transform: translateY(0.2rem);
+    }
+  }
+}

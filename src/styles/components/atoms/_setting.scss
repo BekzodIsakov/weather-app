@@ -1,7 +1,10 @@
 .setting {
   position: relative;
+
   display: flex;
   justify-content: space-between;
+
+  color: var(--font-secondary);
   align-items: center;
 
   .option {
@@ -49,7 +52,7 @@
   }
 }
 
-[data-theme="light"] {
+[data-theme='light'] {
   .setting button .arrow-icon {
     fill: $blue500;
   }

@@ -8,27 +8,30 @@ import {
 import cloud from './assets/images/cloud.png';
 import { useSetTheme } from './hooks/useSetTheme';
 
-import { Humidity, WindSpeed, Sunrise, Sunset } from './components/molecules';
 import Setting from './components/atoms/setting/Setting';
+import {
+  WaterDropIcon,
+  PercentageIcon,
+} from './components/atoms/svg-components';
 
 import './styles.scss';
+import WeatherFeature from './components/molecules/weather-feature/WeatherFeature';
 
 const App = () => {
   const { setTheme, currentMode } = useSetTheme();
-  
+
   return (
-    <div className='app'>
+    <div className="app">
       <Switch checked={currentMode === 'dark'} onClick={setTheme} />
       <Location>San Fransisco, California, USA</Location>
-      <WeatherStatusImg src={cloud} alt='cloud' size={'large'} />
-      <WeatherDegree weatherUnit={'C'}>20</WeatherDegree>
+      <WeatherStatusImg src={cloud} alt="cloud" size={'large'} />
+      <WeatherDegree unit={'c'}>20</WeatherDegree>
       <Pill>Cloudy</Pill>
-
-      <Humidity percentage={92} />
-      <WindSpeed speed={7} />
-      <Sunrise time={'07:48'} />
-      <Sunset time={'17:13'} />
-
+      <WeatherFeature
+        icon={<WaterDropIcon />}
+        data={'07:48'}
+        unit={<PercentageIcon size={'1em'} />}
+      />
       <Setting />
     </div>
   );

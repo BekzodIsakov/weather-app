@@ -2,8 +2,10 @@ import { useEffect, useState } from 'react';
 
 export const useSetTheme = () => {
   const selectedMode = localStorage.getItem('mode');
-  const browserPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
+  const browserPrefersDark = window.matchMedia(
+    '(prefers-color-scheme: dark)'
+  ).matches;
+
   const [currentMode, setCurrentMode] = useState(selectedMode);
 
   const setTheme = () => {
@@ -15,16 +17,15 @@ export const useSetTheme = () => {
 
   useEffect(() => {
     if (selectedMode) {
-      document.body.setAttribute('data-theme', selectedMode);
+      document.documentElement.setAttribute('data-theme', selectedMode);
     } else {
       const mode = browserPrefersDark ? 'dark' : 'light';
-      
+
       setCurrentMode(mode);
-      document.body.setAttribute('data-theme', mode);
+      document.documentElement.setAttribute('data-theme', mode);
     }
     // eslint-disable-next-line
-  }, [currentMode])
-
+  }, [currentMode]);
 
   return {
     setTheme,

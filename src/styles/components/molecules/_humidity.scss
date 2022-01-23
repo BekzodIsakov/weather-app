@@ -8,12 +8,12 @@
   }
 
   svg:last-of-type {
-    fill: $blue200;
+    fill: var(--blue200);
   }
 }
 
 [data-theme='dark'] {
   .humidity svg:last-of-type {
-    fill: $gray;
+    fill: var(--gray);
   }
 }

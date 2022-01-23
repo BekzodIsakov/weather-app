@@ -9,16 +9,40 @@
   outline-offset: 0.2rem;
 }
 
+:root {
+  --font-primary: #1f2d61;
+  --font-secondary: #2a4c63;
+  --font-tertiary: #747474;
+
+  --bg-primary: #fffffb;
+  --bg-secondary: #fff;
+  --bg-tertiary: #999;
+
+  --nav-icon: #d2d2be;
+}
+
+:root[data-theme='dark'] {
+  --font-primary: #e2e2de;
+  --font-secondary: #c4c0c0;
+  --font-tertiary: #2a4c63;
+
+  --bg-primary: #152c39;
+  --bg-secondary: #152c39;
+
+  --nav-icon: #c4c0c0;
+}
+
 html {
   font-size: 62.5%;
-  background-color: $bg-primary;
 }
 
 body {
   min-height: 100vh;
+
   font-size: 1.8rem;
-  color: $font-primary;
-  font-family: "Nunito";
+  font-family: 'Nunito';
+  color: var(--font-primary);
+  background: var(--bg-primary);
 }
 
 h1,
@@ -67,11 +91,6 @@ p {
   max-width: 900px;
   margin: 0 auto;
   padding: 2rem;
-}
-
-[data-theme="dark"] {
-  color: $font-primary-dark;
-  background-color: $bg-primary-dark;
 }
 
 @media only screen and ($phone) {
