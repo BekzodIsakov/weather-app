@@ -1,5 +1,4 @@
 import React from 'react';
-import { BsSunrise } from 'react-icons/bs';
 import { FiSunrise } from 'react-icons/fi';
 import FlexWrapper from '../HOC/FlexWrapper';
 

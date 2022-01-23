@@ -1,5 +1,4 @@
 import React from 'react';
-import './WeatherStatusImg.scss';
 
 const WeatherStatusImg = ({ src, alt, size }) => {
   return (

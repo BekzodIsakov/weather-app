@@ -2,8 +2,6 @@ import React from 'react';
 import { MdOutlineWaterDrop } from 'react-icons/md';
 import { AiOutlinePercentage } from 'react-icons/ai';
 
-import './Humidity.scss';
-
 const Humidity = ({ percentage }) => {
   return (
     <div className='humidity'>

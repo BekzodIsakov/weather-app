@@ -1,5 +1,4 @@
 import React from 'react';
-import './WeatherDegree.scss';
 
 const WeatherDegree = ({ children, fontSize, weatherUnit }) => {
   return (

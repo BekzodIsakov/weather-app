@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { RiArrowRightSLine } from 'react-icons/ri';
 
-import './Setting.scss';
-
 const Setting = ({ children }) => {
   const dropdown = useRef();
   const button = useRef();

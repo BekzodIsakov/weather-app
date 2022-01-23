@@ -1,5 +1,3 @@
-@import '../../../styles/colors';
-
 .setting {
   position: relative;
   display: flex;
@@ -51,7 +49,7 @@
   }
 }
 
-[data-theme='light'] {
+[data-theme="light"] {
   .setting button .arrow-icon {
     fill: $blue500;
   }

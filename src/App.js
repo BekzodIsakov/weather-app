@@ -6,14 +6,19 @@ import {
   Pill,
 } from './components/atoms';
 import cloud from './assets/images/cloud.png';
+import { useSetTheme } from './hooks/useSetTheme';
 
 import { Humidity, WindSpeed, Sunrise, Sunset } from './components/molecules';
 import Setting from './components/atoms/setting/Setting';
 
+import './styles.scss';
+
 const App = () => {
+  const { setTheme, currentMode } = useSetTheme();
+  
   return (
     <div className='app'>
-      <Switch />
+      <Switch checked={currentMode === 'dark'} onClick={setTheme} />
       <Location>San Fransisco, California, USA</Location>
       <WeatherStatusImg src={cloud} alt='cloud' size={'large'} />
       <WeatherDegree weatherUnit={'C'}>20</WeatherDegree>
