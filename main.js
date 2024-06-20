@@ -67,7 +67,7 @@ function getCurrentLocation() {
     navigator.geolocation.getCurrentPosition(
       async ({ coords }) => {
         try {
-          const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${coords.latitude}&longitude=${coords.longitude}&localityLanguage=en`;
+          const url = `httpss://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${coords.latitude}&longitude=${coords.longitude}&localityLanguage=en`;
           const response = await fetch(url);
           if (!response.ok) {
             throw new Error("Failed to fetch current location data");
@@ -128,7 +128,7 @@ async function handleSeachInput(locationName) {
 }
 
 async function searchLocationByName(city) {
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
     import.meta.env.VITE_OPENWEATHERMAP_API_KEY
   }`;
   const response = await fetch(url);
@@ -175,7 +175,7 @@ async function handleLocationClick(location) {
 }
 
 async function fetchForecast(lat, lon) {
-  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
+  const url = `httpss://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
     import.meta.env.VITE_OPENWEATHERMAP_API_KEY
   }&units=metric`;
   const response = await fetch(url);
