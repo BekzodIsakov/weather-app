@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <title>Weather app</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/main.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <dialog id="search-dialog">
+      <button id="dialog-close">
+        <span class="material-symbols-outlined">
+          close
+        </span>
+      </button>
+      <div class="dialog-inner-wrapper">
+        <input placeholder="search any city" type="search" autofocus id="search-input">
+        <ul id="search-result"></ul>
+      </div>
+    </dialog>
+    <div class="container__left">
+      <div>
+        <div>
+          <div class="current-date">
+            <h2 class="day"></h2>
+            <p class="date"></p>
+          </div>
+
+          <div id="current-location">
+            <span class="material-symbols-outlined">
+              location_on
+            </span>
+            <span id="location-name"></span>
+          </div>
+        </div>
+
+        <div class="current-weather">
+          <div class="weather-icon"></div>
+          <div class="weather-temp"><span></span>&deg;C</div>
+          <div class="weather-main">Sunny</div>
+        </div>
+      </div>
+    </div>
+    <div class="container__right">
+      <div class="weather-details">
+        <div class="category">
+          <p class="title">PRECIPITATION</p>
+          <div><span class="precipitation">0</span> %</div>
+        </div>
+
+        <div class="category">
+          <p class="title">HUMIDITY</p>
+          <div><span class="humidity">34</span> %</div>
+        </div>
+
+        <div class="category">
+          <p class="title">WIND</p>
+          <div><span class="wind">0</span> km/h</div>
+        </div>
+      </div>
+      <div class="daily-weather-container">
+        <div class="daily-weather">
+          <div class="icon">☀️</div>
+          <div class="day">Tue</div>
+          <div class="degree">28&deg;C</div>
+        </div>
+        <div class="daily-weather">
+          <div class="icon">☀️</div>
+          <div class="day">Wed</div>
+          <div class="degree">31&deg;C</div>
+        </div>
+        <div class="daily-weather">
+          <div class="icon">☀️</div>
+          <div class="day">Thu</div>
+          <div class="degree">27&deg;C</div>
+        </div>
+        <div class="dailt-weather">
+          <div class="icon">☀️</div>
+          <div class="day">Fri</div>
+          <div class="degree">26&deg;C</div>
+        </div>
+      </div>
+      <button class="location-btn"><span class="material-symbols-outlined">
+          location_on
+        </span>Change location</button>
+    </div>
+  </div>
+</body>
+
+</html>
