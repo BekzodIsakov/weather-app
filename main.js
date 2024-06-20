@@ -67,7 +67,7 @@ function getCurrentLocation() {
     navigator.geolocation.getCurrentPosition(
       async ({ coords }) => {
         try {
-          const url = `httpss://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${coords.latitude}&longitude=${coords.longitude}&localityLanguage=en`;
+          const url = `https://api.bigdatacloud.net/data/reverse-geocode-client?latitude=${coords.latitude}&longitude=${coords.longitude}&localityLanguage=en`;
           const response = await fetch(url);
           if (!response.ok) {
             throw new Error("Failed to fetch current location data");
@@ -175,7 +175,7 @@ async function handleLocationClick(location) {
 }
 
 async function fetchForecast(lat, lon) {
-  const url = `httpss://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${
     import.meta.env.VITE_OPENWEATHERMAP_API_KEY
   }&units=metric`;
   const response = await fetch(url);
