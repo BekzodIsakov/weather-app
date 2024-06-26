@@ -120,6 +120,7 @@ searchInput.addEventListener("input", (event) => {
 
 async function handleSeachInput(locationName) {
   showSpinner();
+  searchResultContainer.innerHTML = "";
   try {
     const resultLocations = await searchLocationByName(locationName);
     renderLocations(resultLocations);
@@ -131,7 +132,6 @@ async function handleSeachInput(locationName) {
 }
 
 async function searchLocationByName(city) {
-
   const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
     import.meta.env.VITE_OPENWEATHERMAP_API_KEY
   }`;
