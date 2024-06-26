@@ -40,7 +40,7 @@ const humidity = document.querySelector(".humidity");
 const wind = document.querySelector(".wind");
 
 const spinner = document.createElement("div");
-searchInput.parentElement.appendChild(spinner);
+searchInput.parentElement.append(spinner);
 spinner.className = "spinner";
 
 (async function () {
@@ -94,22 +94,25 @@ function hideSpinner() {
 }
 
 function debounce(func, delay) {
-  // let timeoutId;
-  // return function (...args) {
-  //   clearTimeout(timeoutId);
-  //   timeoutId = setTimeout(() => func.apply(this, args), delay);
-  // };
-
   let timeoutId;
-  clearTimeout(timeoutId);
-  timeoutId = setTimeout(() => func(), delay);
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => func.apply(this, args), delay);
+  };
+
+  // let timeoutId;
+  // clearTimeout(timeoutId);
+  // timeoutId = setTimeout(() => {console.log('timeout'), func()}, delay);
 }
+
+const handleSearchDebounce = debounce(handleSeachInput, 600);
 
 searchInput.addEventListener("input", (event) => {
   const locationName = event.target.value.trim();
 
   if (locationName.length > 1) {
-    debounce(() => handleSeachInput(locationName), 600);
+    // debounce(() => handleSeachInput(locationName), 600);
+    handleSearchDebounce(locationName, 600);
   } else {
     searchResultContainer.innerHTML = "";
   }
@@ -128,6 +131,7 @@ async function handleSeachInput(locationName) {
 }
 
 async function searchLocationByName(city) {
+
   const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=5&appid=${
     import.meta.env.VITE_OPENWEATHERMAP_API_KEY
   }`;
